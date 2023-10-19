@@ -8,6 +8,11 @@ export default function LifeCycle() {
         setNumber(number + 1);
     }
 
+    //change name base on input value
+    const changeName = (e) => {
+        setName(e.target.value);
+    }
+
     return (
         <>
             <div className="container">
@@ -16,6 +21,7 @@ export default function LifeCycle() {
                         <p>{name}</p>
                         <p>{number}</p>
                         <button className="btn btn-primary" onClick={increment}>+1</button>
+                        <input type="text" onChange={changeName} />
                     </div>
                 </div>
             </div>
